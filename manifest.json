@@ -1,0 +1,15 @@
+{
+	"name": "Sverse",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "Sverse is a browser extension that automatically reverses Scratch 3's layout to match tha of Scratch 2",
+	"permissions": ["http://*/*", "tabs", "webNavigation", "storage"],
+	"browser_action": {
+	    "default_icon": "favicon.png",
+	    "default_popup": "main.html"
+	},
+	"content_scripts": [{
+        "js": ["scripts/contentscript.js"],
+        "matches": ["https://*.scratch.mit.edu/*"]
+    }]
+}
